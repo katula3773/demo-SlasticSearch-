@@ -6,7 +6,7 @@ curl -XPOST "http://localhost:9200/_search" -d'
 {
     "query": {
         "query_string": {
-            "query": "keya"
+            "query": "yellow keyc"
         }
     }
 }' > searchOut.json

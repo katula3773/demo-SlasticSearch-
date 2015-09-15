@@ -2,7 +2,7 @@
 
 # đâu là dữ liệu mẫu tùy vào bảng và các colum khac nhau ta co the tùy biến json theo yêu cầu
 
-# 
+# http://localhost:9200/<index>/<type>/[<id>].     cấu trúc tạo một dữ liệu để search full text
 
 curl -XPUT "http://localhost:9200/demo/color/1" -d '
 {
