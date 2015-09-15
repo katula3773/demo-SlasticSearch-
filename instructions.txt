@@ -14,7 +14,7 @@
     + curlSearch.sh  chạy để thực hiện câu lệnh query dữ liệu với key work là gì "query": "keya" or "query": "keyb" , ...
     + file searchOut.json  dùng để suất dữ liệu tìm được dạng json để dễ kiểm tra
 
-    Chạy câu lệnh sau để thử tìm kiếm :  ./curlSearch.sh >
+    Chạy câu lệnh sau để thử tìm kiếm :  ./curlSearch.sh
 
 ######
 
