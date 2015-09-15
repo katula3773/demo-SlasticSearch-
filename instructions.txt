@@ -1,0 +1,45 @@
+
+- Bước 1 : giải nén file elasticsearch-17.1 zip
+
+- Bước 2 : chạy thư mục  :  bin/elasticsearch   ->  vào thử link  : localhost:9200  để xem thử
+
+- Bước 3 : cấp quyền cho 2 thư mục :
+    vào terminal gõ :
+
+    chmod -R 777 create_index.sh
+    chmod -R 777 curlSearch.sh
+
+    + file create_index.sh dùng để tạo dữ liệu mẫu để test :  kiểu json (tùy vào dữ liệu sau này thế nào có thể tùy biến sau nếu cần)
+    + curlSearch.sh  chạy để thực hiện câu lệnh query dữ liệu với key work là gì "query": "keya" or "query": "keyb" , ...
+    + file searchOut.json  dùng để suất dữ liệu tìm được dạng json để dễ kiểm tra
+
+
+######
+
+Nền tảng elasticSearch  dựa trên việc xử lý tìm kiếm full text search
+
+Nhắc lại kiến thức :
+
+
+Ta sẽ xém xét ví dụ sau để hiểu rõ hơn về inverted index.
+Ta có 3 document là D1, D2, D3
+
+D1 = "hom nay troi mua"
+D2 = "hom nay troi nang"
+D3 = "mot ngay dep troi"
+Theo đó ta sẽ có inverted index của 3 document trên là
+
+"hom" = {D1, D2}
+"nay" = {D1, D2}
+"troi" = {D1, D2, D3}
+"mua" = {D1}
+"nang" = {D2}
+"mot" = {D3}
+"ngay" = {D3}
+"dep" = {D3}
+Nhìn vào kết quả của inverted index trên ta có thể thấy việc search full text sẽ diễn ra rất dễ dàng và nhanh chóng. nó chỉ là việc tính toán của các term. Ví dụ khi muốn query từ “hom nay” (tùy theo việc là query theo kiểu and hay or thì phép tính toán sẽ khác đi. ở đây mình sẽ lấy ví dụ là query theo kiểu and.) thì phép toán là
+
+{D1, D2} ∩ {D1, D2} = {D1, D2}
+Kết quả thu được chính là document 1 và 2(D1 and D2).
+
+

@@ -6,7 +6,7 @@
 
 curl -XPUT "http://localhost:9200/demo/color/1" -d '
 {
-		color: "red keya keyb keyc biet",
+		color: "red keya keyb keyc ",
 		value: "#f00"
 	}'
 
@@ -18,7 +18,7 @@ curl -XPUT "http://localhost:9200/demo/color/2" -d '
 
 curl -XPUT "http://localhost:9200/demo/color/3" -d '
 {
-		color: "blue keya keyb biet",
+		color: "blue keya keyb ",
 		value: "#00f"
 	}'
 
