@@ -9,7 +9,7 @@ curl -XPOST "http://localhost:9200/_search" -d'
             "query": "keya"
         }
     }
-}'
+}' > searchOut.json
 
 
 # Search sâu vào từng khu vực doccument 

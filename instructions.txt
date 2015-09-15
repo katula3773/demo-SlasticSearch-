@@ -9,10 +9,12 @@
     chmod -R 777 create_index.sh
     chmod -R 777 curlSearch.sh
 
+
     + file create_index.sh dùng để tạo dữ liệu mẫu để test :  kiểu json (tùy vào dữ liệu sau này thế nào có thể tùy biến sau nếu cần)
     + curlSearch.sh  chạy để thực hiện câu lệnh query dữ liệu với key work là gì "query": "keya" or "query": "keyb" , ...
     + file searchOut.json  dùng để suất dữ liệu tìm được dạng json để dễ kiểm tra
 
+    Chạy câu lệnh sau để thử tìm kiếm :  ./curlSearch.sh >
 
 ######
 
